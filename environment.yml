@@ -1,0 +1,21 @@
+name: rosa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - -e .
+    - PyYAML==6.0.1
+    - python-dotenv>=1.0.1
+    - langchain~=0.3.23
+    - langchain-community~=0.3.21
+    - langchain-core~=0.3.52
+    - langchain-openai~=0.3.14
+    - pydantic
+    - pyinputplus
+    - azure-identity
+    - cffi
+    - rich
+    - pillow>=10.4.0
+    - numpy>=1.26.4
