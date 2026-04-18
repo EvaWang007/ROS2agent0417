@@ -1,0 +1,17 @@
+[0.486s] Invoking command in '/home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2/build --no-deps symlink_data
+[0.669s] running develop
+[0.782s] running egg_info
+[0.782s] writing turtle_agent_ros2.egg-info/PKG-INFO
+[0.782s] writing dependency_links to turtle_agent_ros2.egg-info/dependency_links.txt
+[0.782s] writing entry points to turtle_agent_ros2.egg-info/entry_points.txt
+[0.782s] writing requirements to turtle_agent_ros2.egg-info/requires.txt
+[0.782s] writing top-level names to turtle_agent_ros2.egg-info/top_level.txt
+[0.784s] reading manifest file 'turtle_agent_ros2.egg-info/SOURCES.txt'
+[0.784s] writing manifest file 'turtle_agent_ros2.egg-info/SOURCES.txt'
+[0.785s] running build_ext
+[0.785s] Creating /home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/python3.10/site-packages/turtle-agent-ros2.egg-link (link to .)
+[0.786s] Installing turtle_agent script to /home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/turtle_agent_ros2
+[0.786s] 
+[0.786s] Installed /home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2
+[0.786s] running symlink_data
+[0.808s] Invoked command in '/home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2' returned '0': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2/build --no-deps symlink_data

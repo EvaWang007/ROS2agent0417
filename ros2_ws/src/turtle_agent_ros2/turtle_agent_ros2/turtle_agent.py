@@ -6,7 +6,7 @@ from rosa import ROSA
 from .llm import get_llm
 from .prompts import get_prompts
 from .help import get_help
-from .tools import turtle_ros2
+from .tool import turtle_ros2
 
 
 class TurtleAgentROS2(ROSA):

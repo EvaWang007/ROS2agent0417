@@ -15,7 +15,7 @@ def get_llm(streaming: bool = False):
 
     # DeepSeek OpenAI-compatible config
     return ChatOpenAI(
-        api_key=get_env_variable("sk-b5d302d9143245b9af8af66df5fc26cb"),
+        api_key=get_env_variable("DEEPSEEK_API_KEY"),
         base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
         model=os.getenv("DEEPSEEK_MODEL", "deepseek-chat"),
         streaming=streaming,

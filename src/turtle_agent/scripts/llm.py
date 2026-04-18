@@ -21,22 +21,30 @@ from langchain_openai import ChatOpenAI
 def get_llm(streaming: bool = False):
     """A helper function to get the LLM instance.
 
-    Supports OpenAI (default), Anthropic and Ollama models.
+    Supports DeepSeek (default), OpenAI, Anthropic and Ollama models.
     Set the LLM_PROVIDER env variable to switch between providers:
-      - "openai" (default): uses OPENAI_API_KEY
+      - "deepseek" (default): uses DEEPSEEK_API_KEY
+      - "openai": uses OPENAI_API_KEY
       - "anthropic": uses ANTHROPIC_API_KEY
       - "ollama": uses local Ollama instance
     """
     dotenv.load_dotenv(dotenv.find_dotenv())
 
-    provider = os.getenv("LLM_PROVIDER", "openai").lower().strip()
-    supported = ("openai", "anthropic", "ollama")
+    provider = os.getenv("LLM_PROVIDER", "deepseek").lower().strip()
+    supported = ("deepseek", "openai", "anthropic", "ollama")
     if provider not in supported:
         raise ValueError(
             f"Unknown LLM_PROVIDER: '{provider}'. Must be one of: {', '.join(supported)}"
         )
 
-    if provider == "openai":
+    if provider == "deepseek":
+        llm = ChatOpenAI(
+            api_key=get_env_variable("DEEPSEEK_API_KEY"),
+            base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
+            model=os.getenv("DEEPSEEK_MODEL", "deepseek-chat"),
+            streaming=streaming,
+        )
+    elif provider == "openai":
         llm = ChatOpenAI(
             api_key=get_env_variable("OPENAI_API_KEY"),
             model=os.getenv("OPENAI_MODEL", "gpt-4o"),

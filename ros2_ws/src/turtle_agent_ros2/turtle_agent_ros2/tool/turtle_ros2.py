@@ -77,6 +77,7 @@ def within_bounds(x: float, y: float) -> bool:
 
 @tool
 def get_turtle_pose(names: List[str]) -> dict:
+    """Get pose information for one or more turtles"""
     out = {}
     for name in names:
         n = name.replace("/", "")
@@ -87,6 +88,7 @@ def get_turtle_pose(names: List[str]) -> dict:
 
 @tool
 def teleport_absolute(name: str, x: float, y: float, theta: float) -> str:
+    """Teleport turtle to an absolute pose (x,y,theta)"""
     if not within_bounds(x, y):
         return f"Out of bounds: ({x}, {y})"
     n = name.replace("/", "")
@@ -103,6 +105,7 @@ def teleport_absolute(name: str, x: float, y: float, theta: float) -> str:
 
 @tool
 def publish_twist_to_cmd_vel(name: str, velocity: float, angle: float = 0.0, steps: int = 1) -> str:
+    """Publish Twist messages to /<name>/cmd_vel to move the turtle"""
     n = name.replace("/", "")
     rt().ensure_pub(n)
     msg = Twist()
@@ -117,6 +120,7 @@ def publish_twist_to_cmd_vel(name: str, velocity: float, angle: float = 0.0, ste
 
 @tool
 def clear_turtlesim() -> str:
+    """Clear all drawings in turtlesim (calls /clear service)"""
     req = Empty.Request()
     ok, res = rt().call_service("/clear", Empty, req)
     return "cleared" if ok else str(res)
@@ -124,6 +128,7 @@ def clear_turtlesim() -> str:
 
 @tool
 def reset_turtlesim() -> str:
+    """Reset turtlesim to initial state using the /reset service"""
     req = Empty.Request()
     ok, res = rt().call_service("/reset", Empty, req)
     return "reset done" if ok else str(res)
