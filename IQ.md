@@ -152,7 +152,7 @@ LLM 看到的主要还是：
 
 LLM 调什么，它就直接执行什么。
 
-### 对有 `blacklist` 的工具
+***对有 `blacklist` 的工具***
 
 LLM 虽然还是只传业务参数，比如 `topic_name="/camera/raw"`，
 但 ROSA 会在后台自动把 blacklist 一起传进去，比如：
@@ -251,26 +251,23 @@ ros2_topic_echo("/camera/raw", blacklist=["/camera/raw", "/private/debug"])
 ```text id="ck3o2z"
 Access denied: /camera/raw
 ```
-
----
-
-```
 说明两点：
 ```
-## 第一
+第一
 
 **blacklist 是否生效，不取决于 LLM 会不会“记住规则”，而取决于工具本身是否支持 blacklist 参数。**
 
-## 第二
+第二
 
 **同一个黑名单，对不同工具是否生效，要看工具有没有按 ROSA 的约定接入 blacklist。**
 
 这就是工程上很重要的地方：
 
+```
 * 不是“全局自动拦所有工具”
 * 而是“只拦那些显式支持 blacklist 的工具”
 ```text
-
+```
 >🪄In Conclusion:
 > 使用blacklist注入机制的tools在被LLM调用的时候，被blacklist覆盖的参数是无法被LLM访问的，该机制的主要目的带 blacklist 的工具在执行时会自动附加黑名单约束，从而阻止 agent 访问某些敏感或不允许暴露的资源
 
