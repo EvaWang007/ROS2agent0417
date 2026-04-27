@@ -275,3 +275,47 @@ Access denied: /camera/raw
 > 使用blacklist注入机制的tools在被LLM调用的时候，被blacklist覆盖的参数是无法被LLM访问的，该机制的主要目的带 blacklist 的工具在执行时会自动附加黑名单约束，从而阻止 agent 访问某些敏感或不允许暴露的资源
 
 
+
+
+
+
+## nav_ws和ROSA_MAIN的python3运行环境不同的问题解决
+
+> ***“环境隔离 + 脚本固化”解决的，核心做法有 4 点：***
+
+1. 明确根因  
+- `nav_ws` 构建时被 `rosa` conda 环境污染，`ament/cmake` 走了 conda Python。  
+- 这会触发 `catkin_pkg` 等模块缺失或行为差异，导致构建/启动异常。
+
+2. 强制 `nav_ws` 使用系统 Python  
+- 在脚本里固定：
+  - `COLCON_PYTHON_EXECUTABLE=/usr/bin/python3`
+  - `AMENT_PYTHON_EXECUTABLE=/usr/bin/python3`
+  - `source /opt/ros/humble/setup.bash`
+- 并清理 conda 影响（`conda deactivate` + `unset CONDA_*`）。
+
+3. 拆成两套脚本，避免混用  
+- [build_nav.sh](/home/evawang/Downloads/rosa-main/nav_ws/build_nav.sh)：专门清理并编译 `nav_ws`（系统 Python）。  
+- [start_sim.sh](/home/evawang/Downloads/rosa-main/nav_ws/start_sim.sh)：专门启动仿真与导航（系统 Python）。  
+- 这样 `nav_ws` 生命周期都在一致环境里运行。
+
+4. 处理 ROS setup 脚本兼容性  
+- 发现 `set -u` 会让 ROS/colcon 的 `setup.bash` 因未定义变量报错（`AMENT_TRACE_SETUP_FILES`、`AMENT_PYTHON_EXECUTABLE`、`COLCON_TRACE`）。  
+- 最终改为 `set -eo pipefail`，并补默认变量，保证稳定启动。
+
+最终效果：
+1. `nav_ws` 可以干净重编译并成功运行。  
+2. `ROSA_MAIN` 的 `rosa` 环境保留给 Agent/LLM 运行，不再干扰 `nav_ws` 的 ROS 构建与仿真。  
+3. 两个项目在同机并存，职责清晰、可重复执行。
+
+
+
+
+
+
+
+
+
+
+
+
