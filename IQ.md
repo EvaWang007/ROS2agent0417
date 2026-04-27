@@ -254,9 +254,9 @@ Access denied: /camera/raw
 
 ---
 
-```text
+```
 说明两点：
-
+```
 ## 第一
 
 **blacklist 是否生效，不取决于 LLM 会不会“记住规则”，而取决于工具本身是否支持 blacklist 参数。**
@@ -269,11 +269,9 @@ Access denied: /camera/raw
 
 * 不是“全局自动拦所有工具”
 * 而是“只拦那些显式支持 blacklist 的工具”
-
----
 ```text
 
 >🪄In Conclusion:
-使用blacklist注入机制的tools在被LLM调用的时候，被blacklist覆盖的参数是无法被LLM访问的，该机制的主要目的带 blacklist 的工具在执行时会自动附加黑名单约束，从而阻止 agent 访问某些敏感或不允许暴露的资源
+> 使用blacklist注入机制的tools在被LLM调用的时候，被blacklist覆盖的参数是无法被LLM访问的，该机制的主要目的带 blacklist 的工具在执行时会自动附加黑名单约束，从而阻止 agent 访问某些敏感或不允许暴露的资源
 
 
