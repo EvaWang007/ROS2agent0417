@@ -1,0 +1,23 @@
+[35m[1mConsolidate compiler generated dependencies of target my_astar_planner_lib[0m
+[100%] Built target my_astar_planner_lib
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner//plugins.xml
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/lib/libmy_astar_planner_lib.so
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/include/my_astar_planner/my_astar_planner.hpp
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/package_run_dependencies/my_astar_planner
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/parent_prefix_path/my_astar_planner
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/ament_prefix_path.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/ament_prefix_path.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/path.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/path.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.bash
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.zsh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/package.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/packages/my_astar_planner
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/my_astar_planner
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/cmake/my_astar_plannerConfig.cmake
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/cmake/my_astar_plannerConfig-version.cmake
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/package.xml

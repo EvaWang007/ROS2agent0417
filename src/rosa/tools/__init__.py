@@ -82,9 +82,10 @@ class ROSATools:
 
             self.__iterative_add(ros1, blacklist=blacklist)
         elif self.__ros_version == 2:
-            from . import ros2
+            from . import ros2, ros2_docs
 
             self.__iterative_add(ros2, blacklist=blacklist)
+            self.__iterative_add(ros2_docs, blacklist=blacklist)
         else:
             raise ValueError("Invalid ROS version. Must be either 1 or 2.")
 

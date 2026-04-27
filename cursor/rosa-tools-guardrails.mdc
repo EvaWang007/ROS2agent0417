@@ -1,0 +1,31 @@
+---
+alwaysApply: true
+---
+---
+description: Guardrails for ROSA tools edits
+alwaysApply: true
+---
+
+# Scope
+Applies to code changes in src/rosa/** and tests/test_rosa/**.
+
+# Security
+- Never read, print, or modify secrets in `.env` or private key files.
+- Respect `.cursorignore`; do not use ignored files as context.
+
+# Change policy
+- Prefer minimal edits; do not refactor unrelated files.
+- Keep public function signatures unchanged unless explicitly requested.
+
+# ROSA-specific constraints
+- If a change touches blacklist-related logic, verify the full path:
+  `ROSA.__init__ -> ROSATools -> inject_blacklist -> ros1/ros2 filtering`.
+- Reuse existing tool patterns in `src/rosa/tools` before adding new abstractions.
+
+# Testing and output
+- Before editing, inspect related tests under `tests/test_rosa`.
+- After editing, provide:
+  1) changed files
+  2) why the change is needed
+  3) exact validation commands
+  4) risk/regression notes

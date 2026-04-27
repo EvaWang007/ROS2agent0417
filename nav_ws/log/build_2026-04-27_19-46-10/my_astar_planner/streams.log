@@ -1,0 +1,27 @@
+[0.015s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --build /home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner -- -j16 -l16
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target my_astar_planner_lib[0m
+[0.077s] [100%] Built target my_astar_planner_lib
+[0.257s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --build /home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner -- -j16 -l16
+[0.259s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --install /home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner
+[0.266s] -- Install configuration: ""
+[0.266s] -- Execute custom install script
+[0.266s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner//plugins.xml
+[0.277s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/lib/libmy_astar_planner_lib.so
+[0.286s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/include/my_astar_planner/my_astar_planner.hpp
+[0.295s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/package_run_dependencies/my_astar_planner
+[0.306s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/parent_prefix_path/my_astar_planner
+[0.316s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/ament_prefix_path.sh
+[0.326s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/ament_prefix_path.dsv
+[0.335s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/path.sh
+[0.345s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/environment/path.dsv
+[0.354s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.bash
+[0.364s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.sh
+[0.374s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.zsh
+[0.384s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/local_setup.dsv
+[0.393s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/package.dsv
+[0.403s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/packages/my_astar_planner
+[0.413s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/my_astar_planner
+[0.422s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/cmake/my_astar_plannerConfig.cmake
+[0.431s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/cmake/my_astar_plannerConfig-version.cmake
+[0.440s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/my_astar_planner/share/my_astar_planner/package.xml
+[0.452s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --install /home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner

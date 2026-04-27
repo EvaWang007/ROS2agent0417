@@ -1,0 +1,24 @@
+[0.560s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/build --no-deps symlink_data
+[0.773s] running develop
+[0.905s] running egg_info
+[0.905s] writing robot_patrol.egg-info/PKG-INFO
+[0.905s] writing dependency_links to robot_patrol.egg-info/dependency_links.txt
+[0.905s] writing entry points to robot_patrol.egg-info/entry_points.txt
+[0.905s] writing requirements to robot_patrol.egg-info/requires.txt
+[0.905s] writing top-level names to robot_patrol.egg-info/top_level.txt
+[0.905s] reading manifest file 'robot_patrol.egg-info/SOURCES.txt'
+[0.906s] writing manifest file 'robot_patrol.egg-info/SOURCES.txt'
+[0.909s] running build_ext
+[0.909s] Creating /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/lib/python3.10/site-packages/robot-patrol.egg-link (link to .)
+[0.910s] Installing robot_patrol script to /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/lib/robot_patrol
+[0.911s] 
+[0.911s] Installed /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol
+[0.911s] running symlink_data
+[0.911s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/ament_index
+[0.911s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/ament_index/resource_index
+[0.911s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/ament_index/resource_index/packages
+[0.912s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/resource/robot_patrol -> /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/ament_index/resource_index/packages
+[0.912s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/package.xml -> /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/robot_patrol
+[0.912s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/robot_patrol/config
+[0.912s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/config/my_nav_params.yaml -> /home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/share/robot_patrol/config
+[1.005s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol' returned '0': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/nav_ws/install/robot_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/nav_ws/build/robot_patrol/build --no-deps symlink_data

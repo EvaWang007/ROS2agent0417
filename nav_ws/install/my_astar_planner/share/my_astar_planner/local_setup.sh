@@ -1,0 +1,1 @@
+/home/evawang/Downloads/rosa-main/nav_ws/build/my_astar_planner/ament_cmake_environment_hooks/local_setup.sh

@@ -1,0 +1,29 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/autonomous_navigation.launch.cpython-310.pyc
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/house_sim.launch.cpython-310.pyc
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/house_slam.launch.cpython-310.pyc
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/autonomous_navigation.launch.py
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/house_sim.launch.py
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/house_slam.launch.py
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/config/ekf.yaml
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/config/nav2_config.rviz
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/worlds/house.world
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/maps/house_map.pgm
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/maps/house_map.yaml
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/params/nav2_params.yaml
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/package_run_dependencies/robot_simulation
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/parent_prefix_path/robot_simulation
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/ament_prefix_path.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/ament_prefix_path.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/path.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/path.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.bash
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.sh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.zsh
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/package.dsv
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/packages/robot_simulation
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/cmake/robot_simulationConfig.cmake
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/cmake/robot_simulationConfig-version.cmake
+-- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/package.xml

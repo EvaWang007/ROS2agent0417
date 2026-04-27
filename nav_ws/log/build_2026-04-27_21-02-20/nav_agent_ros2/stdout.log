@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing nav_agent_ros2.egg-info/PKG-INFO
+writing dependency_links to nav_agent_ros2.egg-info/dependency_links.txt
+writing entry points to nav_agent_ros2.egg-info/entry_points.txt
+writing requirements to nav_agent_ros2.egg-info/requires.txt
+writing top-level names to nav_agent_ros2.egg-info/top_level.txt
+reading manifest file 'nav_agent_ros2.egg-info/SOURCES.txt'
+writing manifest file 'nav_agent_ros2.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/python3.10/site-packages/nav-agent-ros2.egg-link (link to .)
+Installing nav_agent script to /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/nav_agent_ros2
+
+Installed /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2
+running symlink_data

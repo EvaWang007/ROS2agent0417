@@ -1,0 +1,26 @@
+[0.495s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/build --no-deps symlink_data
+[0.691s] running develop
+[0.814s] running egg_info
+[0.815s] creating nav_agent_ros2.egg-info
+[0.815s] writing nav_agent_ros2.egg-info/PKG-INFO
+[0.816s] writing dependency_links to nav_agent_ros2.egg-info/dependency_links.txt
+[0.816s] writing entry points to nav_agent_ros2.egg-info/entry_points.txt
+[0.816s] writing requirements to nav_agent_ros2.egg-info/requires.txt
+[0.816s] writing top-level names to nav_agent_ros2.egg-info/top_level.txt
+[0.816s] writing manifest file 'nav_agent_ros2.egg-info/SOURCES.txt'
+[0.818s] reading manifest file 'nav_agent_ros2.egg-info/SOURCES.txt'
+[0.819s] writing manifest file 'nav_agent_ros2.egg-info/SOURCES.txt'
+[0.820s] running build_ext
+[0.820s] Creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/python3.10/site-packages/nav-agent-ros2.egg-link (link to .)
+[0.821s] Installing nav_agent script to /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/nav_agent_ros2
+[0.821s] 
+[0.822s] Installed /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2
+[0.822s] running symlink_data
+[0.822s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/ament_index
+[0.822s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/ament_index/resource_index
+[0.822s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/ament_index/resource_index/packages
+[0.822s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/resource/nav_agent_ros2 -> /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/ament_index/resource_index/packages
+[0.822s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/package.xml -> /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/nav_agent_ros2
+[0.822s] creating /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/nav_agent_ros2/launch
+[0.822s] symbolically linking /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/launch/agent.launch.py -> /home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/share/nav_agent_ros2/launch
+[0.867s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2' returned '0': CONDA_PROMPT_MODIFIER=(rosa) PYTHONPATH=/home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/evawang/Downloads/rosa-main/nav_ws/install/nav_agent_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/evawang/Downloads/rosa-main/nav_ws/build/nav_agent_ros2/build --no-deps symlink_data

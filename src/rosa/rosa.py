@@ -93,6 +93,8 @@ class ROSA:
         show_token_usage: bool = False,
         streaming: bool = True,
         max_iterations: int = 100,
+
+
         return_intermediate_steps: bool = False,
     ):
         self.__chat_history = []

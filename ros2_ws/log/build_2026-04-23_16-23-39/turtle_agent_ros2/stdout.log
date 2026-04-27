@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing turtle_agent_ros2.egg-info/PKG-INFO
+writing dependency_links to turtle_agent_ros2.egg-info/dependency_links.txt
+writing entry points to turtle_agent_ros2.egg-info/entry_points.txt
+writing requirements to turtle_agent_ros2.egg-info/requires.txt
+writing top-level names to turtle_agent_ros2.egg-info/top_level.txt
+reading manifest file 'turtle_agent_ros2.egg-info/SOURCES.txt'
+writing manifest file 'turtle_agent_ros2.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/python3.10/site-packages/turtle-agent-ros2.egg-link (link to .)
+Installing turtle_agent script to /home/evawang/Downloads/rosa-main/ros2_ws/install/turtle_agent_ros2/lib/turtle_agent_ros2
+
+Installed /home/evawang/Downloads/rosa-main/ros2_ws/build/turtle_agent_ros2
+running symlink_data

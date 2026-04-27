@@ -1,0 +1,33 @@
+[0.006s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation': AMENT_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --build /home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation -- -j16 -l16
+[0.046s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation' returned '0': AMENT_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --build /home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation -- -j16 -l16
+[0.048s] Invoking command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation': AMENT_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --install /home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation
+[0.055s] -- Install configuration: ""
+[0.055s] -- Execute custom install script
+[0.056s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/autonomous_navigation.launch.cpython-310.pyc
+[0.065s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/house_sim.launch.cpython-310.pyc
+[0.075s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/__pycache__/house_slam.launch.cpython-310.pyc
+[0.085s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/autonomous_navigation.launch.py
+[0.094s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/house_sim.launch.py
+[0.103s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/launch/house_slam.launch.py
+[0.112s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/config/ekf.yaml
+[0.120s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/config/nav2_config.rviz
+[0.129s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/worlds/house.world
+[0.140s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/maps/house_map.pgm
+[0.150s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/maps/house_map.yaml
+[0.161s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/params/nav2_params.yaml
+[0.172s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/package_run_dependencies/robot_simulation
+[0.183s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/parent_prefix_path/robot_simulation
+[0.193s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/ament_prefix_path.sh
+[0.203s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/ament_prefix_path.dsv
+[0.212s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/path.sh
+[0.221s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/environment/path.dsv
+[0.233s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.bash
+[0.242s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.sh
+[0.252s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.zsh
+[0.261s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/local_setup.dsv
+[0.271s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/package.dsv
+[0.281s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/ament_index/resource_index/packages/robot_simulation
+[0.291s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/cmake/robot_simulationConfig.cmake
+[0.299s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/cmake/robot_simulationConfig-version.cmake
+[0.309s] -- Symlinking: /home/evawang/Downloads/rosa-main/nav_ws/install/robot_simulation/share/robot_simulation/package.xml
+[0.325s] Invoked command in '/home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation' returned '0': AMENT_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/evawang/Downloads/rosa-main/nav_ws/install/robot_description:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rosa) /usr/bin/cmake --install /home/evawang/Downloads/rosa-main/nav_ws/build/robot_simulation
