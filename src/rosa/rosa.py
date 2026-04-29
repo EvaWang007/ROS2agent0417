@@ -13,7 +13,6 @@
 #  limitations under the License.
 
 from __future__ import annotations
-
 import logging
 from contextlib import contextmanager
 from typing import TYPE_CHECKING, Any, AsyncIterable, Dict, Literal, Optional, Union
@@ -26,6 +25,21 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
+
+from .tool_trace_logger import (
+    get_trace_loggers,
+    log_json,
+    ToolTraceCallbackHandler,
+    new_query_id,
+    set_trace_query_id,
+)#工具调用日志记录器和相关函数
+
+
+
+
+
+
+
 
 #if TYPE_CHECKING:
     #from langchain_anthropic import ChatAnthropic
@@ -95,7 +109,8 @@ class ROSA:
         max_iterations: int = 100,
 
 
-        return_intermediate_steps: bool = False,
+        return_intermediate_steps: bool = False,#是否返回中间步骤
+        #return_intermediate_steps: bool = True,
     ):
         self.__chat_history = []
         self.__ros_version = ros_version
@@ -112,10 +127,14 @@ class ROSA:
         )
         self.__prompts = self._get_prompts(prompts)
         self.__agent = self._get_agent()
+        self.__trace_loggers = get_trace_loggers()
+        self.__trace_handler = ToolTraceCallbackHandler(self.__trace_loggers)
         self.__executor = self._get_executor(verbose=verbose)
+        
         # cache this check - no need to do isinstance on every invoke
         self.__supports_token_tracking = isinstance(llm, (ChatOpenAI, AzureChatOpenAI))
         self.__show_token_usage = show_token_usage if not streaming else False
+        
 
         if self.__show_token_usage and not self.__supports_token_tracking:
             logger.warning(
@@ -155,20 +174,44 @@ class ROSA:
             - The chat history is updated with the query and response if successful.
             - Token usage is printed if the show_token_usage flag is set.
         """
+        query_id = new_query_id()
+        set_trace_query_id(query_id)
+        log_json(
+            self.__trace_loggers["session"],
+            {"event": "query_start", "query_id": query_id, "query": query},
+        )
+
         try:
             with self._token_callback() as cb:
                 result = self.__executor.invoke(
-                    {"input": query, "chat_history": self.__chat_history}
+                    {"input": query, "chat_history": self.__chat_history},
+                    config={
+                        "callbacks": [self.__trace_handler],
+                        "metadata": {"query_id": query_id},
+                    },
                 )
-                self._print_usage(cb)
+
+            self._print_usage(cb)
         except KeyboardInterrupt:
-            # Re-raise KeyboardInterrupt so it can be handled upstream
             raise
         except Exception as e:
+            log_json(
+                self.__trace_loggers["session"],
+                {"event": "query_error", "query_id": query_id, "error": str(e)},
+            )
             return f"An error occurred: {str(e)}"
 
+        log_json(
+            self.__trace_loggers["session"],
+            {
+                "event": "query_end",
+                "query_id": query_id,
+                "response_preview": result.get("output", "")[:120],
+            },
+        )
         self._record_chat_history(query, result["output"])
         return result["output"]
+
 
     async def astream(self, query: str) -> AsyncIterable[Dict[str, Any]]:
         """
@@ -208,7 +251,11 @@ class ROSA:
             # Stream events from the agent's response
             async for event in self.__executor.astream_events(
                 input={"input": query, "chat_history": self.__chat_history},
-                config={"run_name": "Agent"},
+               config={
+                   "run_name": "Agent",
+                   "callbacks": [self.__trace_handler],
+                },
+
                 version="v2",
             ):
                 # Extract the event type
@@ -271,6 +318,7 @@ class ROSA:
             max_iterations=self.__max_iterations,#表示这个 agent loop 不是无限循环的，最多跑到设定次数。ROSA 默认是 100
             handle_parsing_errors=True,#模型返回的工具调用格式有问题，executor 会尽量处理，而不是直接崩掉
             return_intermediate_steps=self.__return_intermediate_steps,
+            callbacks=[self.__trace_handler],#工具调用的回调函数，我们之前定义的 ToolTraceCallbackHandler 会在工具调用开始和结束时记录日志
         )
         return executor
     
