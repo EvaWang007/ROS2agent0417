@@ -82,14 +82,14 @@ class ToolTraceCallbackHandler(BaseCallbackHandler):
         self.tools_logger = loggers["tools"]
 
     def on_tool_start(self, serialized: Dict[str, Any], input_str: str, **kwargs) -> None:
-        run_id = kwargs.get("run_id")
-        parent_run_id = kwargs.get("parent_run_id")
+        #run_id = kwargs.get("run_id")
+        #parent_run_id = kwargs.get("parent_run_id")
 
         tool_name = serialized.get("name", "unknown_tool")
-        key = str(run_id) if run_id else f"unknown_{time.time()}"
+        #key = str(run_id) if run_id else f"unknown_{time.time()}"
 
         starts = dict(_trace_tool_start_ts.get())
-        starts[key] = time.time()
+        #starts[key] = time.time()
         _trace_tool_start_ts.set(starts)
 
         log_json(
@@ -99,21 +99,21 @@ class ToolTraceCallbackHandler(BaseCallbackHandler):
                 "query_id": get_trace_query_id(),
                 "tool_name": tool_name,
                 "tool_input_summary": _summarize_tool_input(input_str),
-                "run_id": key,
-                "parent_run_id": str(parent_run_id) if parent_run_id else None,
+                #"run_id": key,
+                #"parent_run_id": str(parent_run_id) if parent_run_id else None,
             },
         )
 
     def on_tool_end(self, output: Any, **kwargs) -> None:
-        run_id = kwargs.get("run_id")
-        parent_run_id = kwargs.get("parent_run_id")
-        key = str(run_id) if run_id else ""
+        #run_id = kwargs.get("run_id")
+        #parent_run_id = kwargs.get("parent_run_id")
+        #key = str(run_id) if run_id else ""
 
         starts = dict(_trace_tool_start_ts.get())
-        start_ts = starts.pop(key, None)
+        #start_ts = starts.pop(key, None)
         _trace_tool_start_ts.set(starts)
 
-        latency_ms = int((time.time() - start_ts) * 1000) if start_ts else None
+        #latency_ms = int((time.time() - start_ts) * 1000) if start_ts else None
 
         log_json(
             self.tools_logger,
@@ -121,10 +121,10 @@ class ToolTraceCallbackHandler(BaseCallbackHandler):
                 "event": "tool_end",
                 "query_id": get_trace_query_id(),
                 "tool_name": kwargs.get("name", "unknown_tool"),
-                "latency_ms": latency_ms,
+                #"latency_ms": latency_ms,
                 "status": "ok",
-                "run_id": key,
-                "parent_run_id": str(parent_run_id) if parent_run_id else None,
+                #"run_id": key,
+                #"parent_run_id": str(parent_run_id) if parent_run_id else None,
             },
         )
 
@@ -136,11 +136,11 @@ class ToolTraceCallbackHandler(BaseCallbackHandler):
             self.tools_logger,
             {
                 "event": "tool_error",
-                "query_id": get_trace_query_id(),
+                #"query_id": get_trace_query_id(),
                 "tool_name": kwargs.get("name", "unknown_tool"),
                 "status": "error",
                 "error": _truncate(str(error), 200),
                 "run_id": str(run_id) if run_id else None,
-                "parent_run_id": str(parent_run_id) if parent_run_id else None,
+                #"parent_run_id": str(parent_run_id) if parent_run_id else None,
             },
         )

@@ -1,0 +1,8 @@
+{"ts": "2026-04-30T09:20:07.904253+00:00", "event": "query_start", "query_id": "q_186008f8c407", "query": "List ROS2 nodes/topics/services in current graph."}
+{"ts": "2026-04-30T09:20:20.664277+00:00", "event": "query_end", "query_id": "q_186008f8c407", "response_preview": "Here's a full summary of the current ROS2 graph state:\n\n---\n\n## 📡 ROS2 Graph State\n\n### **Nodes** (31 total)\nThe system "}
+{"ts": "2026-04-30T09:20:20.664709+00:00", "event": "query_start", "query_id": "q_ed1b0779a15c", "query": "Get one scan snapshot."}
+{"ts": "2026-04-30T09:20:28.280092+00:00", "event": "query_end", "query_id": "q_ed1b0779a15c", "response_preview": "Here's the laser scan snapshot from `/scan`:\n\n---\n\n### 🔦 Laser Scan Snapshot\n\n| Property | Value |\n|---|---|\n| **Frame**"}
+{"ts": "2026-05-01T02:13:21.627008+00:00", "event": "query_start", "query_id": "q_6c0089623f60", "query": "get the position of the robot"}
+{"ts": "2026-05-01T02:13:36.101783+00:00", "event": "query_end", "query_id": "q_6c0089623f60", "response_preview": "Here's a summary of the robot's current state:\n\n| Measurement | Value |\n|---|---|\n| **X Position** | **0.34 m** |\n| **Y "}
+{"ts": "2026-05-01T02:15:02.792202+00:00", "event": "query_start", "query_id": "q_c013b398fd94", "query": "make the robot go straight for a short distance for 1 second"}
+{"ts": "2026-05-01T02:15:14.686229+00:00", "event": "query_end", "query_id": "q_c013b398fd94", "response_preview": "Here's what happened:\n\n**Command sent:** `linear_x = 0.2 m/s` forward for **1 second** on `/cmd_vel`\n\n**Result:**\n| | Be"}

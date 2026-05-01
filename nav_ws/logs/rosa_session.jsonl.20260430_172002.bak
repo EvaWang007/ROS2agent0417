@@ -1,0 +1,7 @@
+{"ts": "2026-04-30T08:35:22.706685+00:00", "event": "query_start", "query_id": "q_bf40c91baa79", "query": "List ROS2 nodes/topics/services in current graph."}
+{"ts": "2026-04-30T08:35:35.093025+00:00", "event": "query_end", "query_id": "q_bf40c91baa79", "response_preview": "Here's a full summary of the current ROS2 graph state:\n\n---\n\n## 📡 ROS2 Graph State\n\n### **Nodes** (31 total)\nThe system "}
+{"ts": "2026-04-30T08:35:35.093255+00:00", "event": "query_start", "query_id": "q_244d4a96d0e8", "query": "Get one scan snapshot."}
+{"ts": "2026-04-30T08:35:42.556341+00:00", "event": "query_end", "query_id": "q_244d4a96d0e8", "response_preview": "Here's the **laser scan snapshot** from `/scan`:\n\n| Parameter | Value |\n|---|---|\n| **Frame ID** | `laser_frame` |\n| **A"}
+{"ts": "2026-04-30T08:54:55.025858+00:00", "event": "query_start", "query_id": "q_f0ea64b34060", "query": "get the position of robot"}
+{"ts": "2026-04-30T08:55:18.651102+00:00", "event": "query_end", "query_id": "q_f0ea64b34060", "response_preview": "Here's the robot's current position from two sources:\n\n---\n\n### 📍 Robot Position Summary\n\n**1. Odometry (in `/odom` fram"}
+{"ts": "2026-04-30T09:21:18.047514+00:00", "event": "query_start", "query_id": "q_fc929f11dce7", "query": "make the robot go straight as far as it could till it hit something"}

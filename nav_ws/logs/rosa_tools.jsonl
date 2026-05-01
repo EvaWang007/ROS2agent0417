@@ -1,0 +1,30 @@
+{"ts": "2026-04-30T09:20:09.502939+00:00", "event": "tool_start", "query_id": "q_186008f8c407", "tool_name": "ros2_node_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-04-30T09:20:09.823910+00:00", "event": "tool_end", "query_id": "q_186008f8c407", "tool_name": "ros2_node_list", "status": "ok"}
+{"ts": "2026-04-30T09:20:09.824600+00:00", "event": "tool_start", "query_id": "q_186008f8c407", "tool_name": "ros2_topic_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-04-30T09:20:10.161577+00:00", "event": "tool_end", "query_id": "q_186008f8c407", "tool_name": "ros2_topic_list", "status": "ok"}
+{"ts": "2026-04-30T09:20:10.162237+00:00", "event": "tool_start", "query_id": "q_186008f8c407", "tool_name": "ros2_service_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-04-30T09:20:10.476268+00:00", "event": "tool_end", "query_id": "q_186008f8c407", "tool_name": "ros2_service_list", "status": "ok"}
+{"ts": "2026-04-30T09:20:22.653856+00:00", "event": "tool_start", "query_id": "q_ed1b0779a15c", "tool_name": "get_scan_snapshot", "tool_input_summary": {"preview": "{'topic': '/scan', 'timeout_sec': 2.0, 'samples': 10}"}}
+{"ts": "2026-04-30T09:20:24.012984+00:00", "event": "tool_end", "query_id": "q_ed1b0779a15c", "tool_name": "get_scan_snapshot", "status": "ok"}
+{"ts": "2026-05-01T02:13:23.256393+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "ros2_node_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-05-01T02:13:24.217335+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "ros2_node_list", "status": "ok"}
+{"ts": "2026-05-01T02:13:24.217749+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "ros2_topic_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-05-01T02:13:24.529741+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "ros2_topic_list", "status": "ok"}
+{"ts": "2026-05-01T02:13:26.341806+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "get_odom_snapshot", "tool_input_summary": {"preview": "{'topic': '/odometry/filtered', 'timeout_sec': 2.0}"}}
+{"ts": "2026-05-01T02:13:28.425665+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "get_odom_snapshot", "status": "ok"}
+{"ts": "2026-05-01T02:13:30.095289+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "get_odom_snapshot", "tool_input_summary": {"preview": "{'topic': '/odom', 'timeout_sec': 2.0}"}}
+{"ts": "2026-05-01T02:13:30.102272+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "get_odom_snapshot", "status": "ok"}
+{"ts": "2026-05-01T02:13:32.653526+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "atan2", "tool_input_summary": {"preview": "{'pairs': [[0.6137721071395948, -0.7894832485066832]]}"}}
+{"ts": "2026-05-01T02:13:32.653999+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "atan2", "status": "ok"}
+{"ts": "2026-05-01T02:13:33.999007+00:00", "event": "tool_start", "query_id": "q_6c0089623f60", "tool_name": "radians_to_degrees", "tool_input_summary": {"preview": "{'radians': [2.4807629409543814]}"}}
+{"ts": "2026-05-01T02:13:33.999450+00:00", "event": "tool_end", "query_id": "q_6c0089623f60", "tool_name": "radians_to_degrees", "status": "ok"}
+{"ts": "2026-05-01T02:15:04.830100+00:00", "event": "tool_start", "query_id": "q_c013b398fd94", "tool_name": "ros2_node_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-05-01T02:15:05.138372+00:00", "event": "tool_end", "query_id": "q_c013b398fd94", "tool_name": "ros2_node_list", "status": "ok"}
+{"ts": "2026-05-01T02:15:05.138732+00:00", "event": "tool_start", "query_id": "q_c013b398fd94", "tool_name": "ros2_topic_list", "tool_input_summary": {"preview": "{}"}}
+{"ts": "2026-05-01T02:15:05.469967+00:00", "event": "tool_end", "query_id": "q_c013b398fd94", "tool_name": "ros2_topic_list", "status": "ok"}
+{"ts": "2026-05-01T02:15:07.196874+00:00", "event": "tool_start", "query_id": "q_c013b398fd94", "tool_name": "get_odom_snapshot", "tool_input_summary": {"preview": "{'topic': '/odom'}"}}
+{"ts": "2026-05-01T02:15:07.205063+00:00", "event": "tool_end", "query_id": "q_c013b398fd94", "tool_name": "get_odom_snapshot", "status": "ok"}
+{"ts": "2026-05-01T02:15:09.439749+00:00", "event": "tool_start", "query_id": "q_c013b398fd94", "tool_name": "publish_cmd_vel", "tool_input_summary": {"preview": "{'linear_x': 0.2, 'angular_z': 0.0, 'duration_sec': 1, 'topic': '/cmd_vel'}"}}
+{"ts": "2026-05-01T02:15:10.444140+00:00", "event": "tool_end", "query_id": "q_c013b398fd94", "tool_name": "publish_cmd_vel", "status": "ok"}
+{"ts": "2026-05-01T02:15:11.656212+00:00", "event": "tool_start", "query_id": "q_c013b398fd94", "tool_name": "get_odom_snapshot", "tool_input_summary": {"preview": "{'topic': '/odom'}"}}
+{"ts": "2026-05-01T02:15:11.669163+00:00", "event": "tool_end", "query_id": "q_c013b398fd94", "tool_name": "get_odom_snapshot", "status": "ok"}

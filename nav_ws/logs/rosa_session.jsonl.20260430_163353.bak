@@ -1,0 +1,4 @@
+{"ts": "2026-04-30T08:32:22.339005+00:00", "event": "query_start", "query_id": "q_630e127edd43", "query": "List ROS2 nodes/topics/services in current graph."}
+{"ts": "2026-04-30T08:32:23.573207+00:00", "event": "query_error", "query_id": "q_630e127edd43", "error": "Connection error."}
+{"ts": "2026-04-30T08:32:23.573477+00:00", "event": "query_start", "query_id": "q_53c1f6e18858", "query": "Get one scan snapshot."}
+{"ts": "2026-04-30T08:32:24.894728+00:00", "event": "query_error", "query_id": "q_53c1f6e18858", "error": "Connection error."}

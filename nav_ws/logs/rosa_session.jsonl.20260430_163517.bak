@@ -1,0 +1,6 @@
+{"ts": "2026-04-30T08:33:57.593440+00:00", "event": "query_start", "query_id": "q_ac6a4e8bac2d", "query": "List ROS2 nodes/topics/services in current graph."}
+{"ts": "2026-04-30T08:33:58.983268+00:00", "event": "query_error", "query_id": "q_ac6a4e8bac2d", "error": "Connection error."}
+{"ts": "2026-04-30T08:33:58.983529+00:00", "event": "query_start", "query_id": "q_f97f7f118782", "query": "Get one scan snapshot."}
+{"ts": "2026-04-30T08:34:00.359298+00:00", "event": "query_error", "query_id": "q_f97f7f118782", "error": "Connection error."}
+{"ts": "2026-04-30T08:36:21.383729+00:00", "event": "query_start", "query_id": "q_d554632a519e", "query": "tell me the position of the robot"}
+{"ts": "2026-04-30T08:36:29.874119+00:00", "event": "query_end", "query_id": "q_d554632a519e", "response_preview": "Here's the robot's current position and orientation:\n\n**Position (in the `odom` frame):**\n- **X:** 0.317 m\n- **Y:** -0.2"}
