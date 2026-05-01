@@ -137,10 +137,8 @@ Client → Host → LLM
 LLM 组织最终回答
 ```
 
-
-
-> **tool calling 机制主要发生在 Host ↔ LLM 之间，负责“工具如何暴露给模型、模型如何表达调用、结果如何回填给模型”。**
-> **MCP 主要发生在 Client ↔ Server 之间，负责“工具如何被标准化发现、调用和返回结果”。**
+**tool calling 机制主要发生在 Host ↔ LLM 之间，负责“工具如何暴露给模型、模型如何表达调用、结果如何回填给模型”。**
+**MCP 主要发生在 Client ↔ Server 之间，负责“工具如何被标准化发现、调用和返回结果”。**
 
 
 ```text
@@ -152,6 +150,7 @@ Server：工具执行层
 
 
 > 🥑 reminds:LLM 看到的是 Host 暴露后的工具，不一定是全部 MCP 工具
+> 
 不是 MCP 自动筛选，**通常需要 Host/Agent 框架自己实现筛选策略**。
 
 MCP 主要负责：
@@ -176,7 +175,7 @@ Server 返回结果
 
 ---
 
-## Host 常见筛选方式
+## Host 常见筛选方式(🥑)
 
 ### 1. 全量暴露
 
@@ -303,6 +302,7 @@ ros2_topic_echo
 ---
 
 ***In Conclusion***
+
 在本工程里“暴露哪些工具给 LLM”的筛选机制是你们在 Host 侧实现的，核心就是这两层：
 
 ROSA._get_tools(...) 的组装逻辑
