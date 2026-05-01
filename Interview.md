@@ -329,8 +329,105 @@ LLM 负责“从可见工具里选哪个”
 
 
 
+## 9. C++线程池开发
 
 
+**1. 线程池的核心原理（先建立脑图）**
+1. 固定创建 `N` 个工作线程，避免频繁创建/销毁线程的开销。  
+2. 主线程把任务塞进“任务队列”。  
+3. 工作线程阻塞等待条件变量，被唤醒后从队列取任务执行。  
+4. 用 `future` 拿回结果，实现“提交-异步执行-同步取值”。  
+5. 关闭时设置 `stop`，唤醒所有线程，让它们安全退出并 `join`。
+
+---
+
+**2. 你这个实现怎么落地的**
+对应文件：[ThreadPool.hpp](/home/evawang/ROS_navi/src/loc_monitor_pkg/include/loc_monitor_pkg/ThreadPool.hpp)
+
+1. 数据结构  
+- `workers` 保存所有工作线程（L27）  
+- `tasks` 是 `queue<function<void()>>`（L29）  
+- `queue_mutex + condition` 做同步（L32-L33）  
+- `stop` 控制关闭（L34）
+
+2. 构造函数：启动 worker 循环  
+- 在构造里创建 `threads` 个线程（L38-L40）  
+- 每个线程无限循环：  
+  - 上锁等待 `stop || !tasks.empty()`（L55-L57）  
+  - 若 `stop && tasks.empty()` 则退出（L58-L59）  
+  - 否则取任务并执行（L60-L63）
+
+3. `enqueue` 提交任务  
+- 用 `packaged_task` 包装任意函数+参数（L80-L82）  
+- 通过 `get_future()` 返回 future（L84）  
+- 加锁入队，若已 stop 则抛异常（L86-L93）  
+- `notify_one()` 唤醒一个 worker（L94）
+
+4. 析构安全退出  
+- 先上锁设置 `stop = true`（L101-L104）  
+- `notify_all()` 叫醒所有等待线程（L105）  
+- 逐个 `join()`（L106-L107）
+
+---
+
+**3. 你实现里的亮点（实践层面）**
+1. `wait(lock, predicate)` 用法正确，避免虚假唤醒问题。  
+2. 取任务后解锁再执行，减小临界区，提升并发效率。  
+3. `future` 机制让业务层自然汇总结果，不需要手写回调地狱。  
+4. 析构流程完整，不会留下“悬挂线程”。
+
+---
+
+**4. 你在 ROS2 节点里的使用方式**
+对应文件：[LocMonitor.cpp](/home/evawang/ROS_navi/src/loc_monitor_pkg/src/LocMonitor.cpp)、[LocMonitor.hpp](/home/evawang/ROS_navi/src/loc_monitor_pkg/include/loc_monitor_pkg/LocMonitor.hpp)
+
+1. 节点启动时初始化线程池  
+- `thread_pool_ = std::make_unique<ThreadPool>(num_workers_)`（`LocMonitor.cpp:8`）  
+- worker 数在头文件固定为 `4`（`LocMonitor.hpp:54`）
+
+2. 回调中并行化粒子处理  
+- 粒子按 `chunk` 切分（`LocMonitor.cpp:96`）  
+- 每个分片通过 `enqueue` 提交（`LocMonitor.cpp:103`）  
+- 每个任务做局部累加，最终 `f.get()` 汇总（`LocMonitor.cpp:117-118`）
+
+3. 你采用的是经典 Map-Reduce 思路  
+- Map：每个线程处理自己的粒子段  
+- Reduce：主线程收集每个 future 的结果相加
+
+---
+
+**5. CPU 亲和性（你这版最有特点的点）**
+在 worker 启动时绑定核：`pthread_setaffinity_np`（`ThreadPool.hpp:43-49`）。  
+意义：尽量让线程固定在指定 CPU 上，减少迁移和 cache 抖动，对稳定延迟有帮助。
+
+但这里有两个工程注意点： 
+
+1. 代码里直接 `CPU_SET(i)`，默认 i 对应可用核；在容器/cgroup 或核数不足时可能失败。
+2. 
+3. 没检查 `pthread_setaffinity_np` 返回值，失败时静默，不易排障。
+
+---
+
+> 项目贡献
+🥇性能提升
+
+process_particles_parallel 把粒子分片后并行计算，多个 worker 同时跑重计算循环，回调处理时间明显下降。
+
+🥈ROS2 节点实时性更好
+
+回调更快结束，节点更不容易在高频/大规模粒子数据下积压，系统响应更稳定。
+
+🥉工程可维护性提升
+
+并行逻辑被封装在 ThreadPool，业务代码只管 enqueue + future.get()，后续扩展并行任务更简单。
+
+***In Conclusion:***
+
+这里通过 pthread_setaffinity_np + CPU_SET(i) 给每个 worker 绑了固定 CPU，目的是减少线程迁移和超线程同核竞争；
+
+如果这些 CPU 恰好对应不同物理核，就能明显降低同一物理核两个逻辑核抢执行资源的问题，从而提升粒子云计算时延的稳定性。
+
+补一句边界：当前代码是“按 CPU 编号手动绑定”，并不自动识别“物理核拓扑”，
 
 
 
